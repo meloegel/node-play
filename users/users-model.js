@@ -35,8 +35,8 @@ function deleteUser(id) {
         .del(id)
 }
 
-function login(username) {
+function login(filter) {
     return db('users')
-        .where({ username })
-        .first()
+        .where(filter)
+        .orderBy('id')
 }

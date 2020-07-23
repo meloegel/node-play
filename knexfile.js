@@ -1,3 +1,5 @@
+const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost";
+
 module.exports = {
 
   development: {

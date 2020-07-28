@@ -38,5 +38,5 @@ function updateQuestion(changes, id) {
 function deleteQuestion(id) {
     return db('questions')
         .where({ id })
-        .del(id)
+        .del()
 }

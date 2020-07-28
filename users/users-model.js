@@ -32,7 +32,7 @@ function updateUser(changes, id) {
 function deleteUser(id) {
     return db('users')
         .where({ id })
-        .del(id)
+        .del()
 }
 
 function login(filter) {

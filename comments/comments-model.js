@@ -31,5 +31,5 @@ function updateComment(changes, id) {
 function deleteComment(id) {
     return db('comments')
         .where({ id })
-        .del(id)
+        .del()
 }

@@ -81,7 +81,7 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     const { id } = req.params
-    Questions.remove(id)
+    Questions.deleteQuestion(id)
         .then(deleted => {
             if (deleted) {
                 res.status(200).json({ removed: deleted })

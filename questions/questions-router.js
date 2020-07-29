@@ -84,7 +84,7 @@ router.delete('/:id', (req, res) => {
     Questions.deleteQuestion(id)
         .then(deleted => {
             if (deleted) {
-                res.status(200).json({ removed: deleted })
+                res.status(200).json({ Removed: `Question with id: ${id}` })
             } else {
                 res.status(404).json({ errorMessage: 'Could not find Question with that id' })
             }

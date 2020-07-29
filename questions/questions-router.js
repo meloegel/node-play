@@ -51,7 +51,7 @@ router.post('/', (req, res) => {
     const newQuestion = req.body
     Questions.addQuestion(newQuestion)
         .then(question => {
-            res.status(201).json(question)
+            res.status(201).json({ Posted: newQuestion })
         })
         .catch(error => {
             console.log(error)

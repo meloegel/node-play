@@ -17,9 +17,9 @@ server.use(express.json())
 
 
 server.use('/api/auth', AuthRouter)
-server.use('/api/users', restrictedMiddleware, UserRouter)
-server.use('/api/questions', restrictedMiddleware, QuestionsRouter)
-server.use('/api/comments', restrictedMiddleware, CommentsRouter)
+server.use('/api/auth/users', restrictedMiddleware, UserRouter)
+server.use('/api/auth/questions', restrictedMiddleware, QuestionsRouter)
+server.use('/api/auth/comments', restrictedMiddleware, CommentsRouter)
 
 server.get('/', (req, res) => {
     const message = process.env.MESSAGE

@@ -31,18 +31,6 @@ router.get('/:id', (req, res) => {
         })
 })
 
-router.post('/', (req, res) => {
-    const newUser = req.body
-    Users.addUser(newUser)
-        .then(user => {
-            res.status(201).json(user)
-        })
-        .catch(error => {
-            console.log(error)
-            res.status(500).json({ errorMessage: 'Error adding user' })
-        })
-})
-
 router.put('/:id', (req, res) => {
     const { id } = req.params
     const changes = req.body

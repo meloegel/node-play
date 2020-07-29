@@ -35,7 +35,7 @@ router.post('/', (req, res) => {
     const newComment = req.body
     Comments.addComment(newComment)
         .then(comment => {
-            res.status(201).json({ Posted: comment })
+            res.status(201).json({ Posted: newComment })
         })
         .catch(error => {
             console.log(error)

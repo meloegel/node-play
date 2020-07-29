@@ -1,4 +1,4 @@
-const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/auth"
+const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/api/auth"
 
 module.exports = {
 
@@ -20,6 +20,19 @@ module.exports = {
       },
     },
   },
+  testing: {
+    client: "sqlite3",
+    connection: {
+      filename: "./data/test.db3",
+    },
+    useNullAsDefault: true,
+    migrations: {
+      directory: "./data/migrations",
+    },
+    seeds: {
+      directory: "./data/seeds",
+    },
+  },
   production: {
     client: 'pg',
     connection: pgConnection,
@@ -28,7 +41,7 @@ module.exports = {
       max: 10
     },
     migrations: {
-      tableName: './data/migrations'
+      directory: './data/migrations'
     },
     seeds: {
       directory: "./data/seeds",

@@ -51,7 +51,7 @@ router.put('/:id', (req, res) => {
             if (comment) {
                 Comments.updateComment(changes, id)
                     .then(updatedComment => {
-                        res.status(200).json(updatedComment)
+                        res.status(200).json({ Updated: `Comment with id: ${id}` })
                     })
             } else {
                 res.status(404).json({ errorMessage: 'Could not find Comment with that id' })

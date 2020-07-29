@@ -67,7 +67,7 @@ router.put('/:id', (req, res) => {
             if (question) {
                 Questions.updateQuestion(changes, id)
                     .then(updatedQuestion => {
-                        res.status(200).json(updatedQuestion)
+                        res.status(200).json({ Updated: `Question with id: ${id}` })
                     })
             } else {
                 res.status(404).json({ errorMessage: 'Could not find Question with that id' })

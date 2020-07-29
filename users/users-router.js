@@ -39,7 +39,7 @@ router.put('/:id', (req, res) => {
             if (user) {
                 Users.updateUser(changes, id)
                     .then(updatedUser => {
-                        res.status(200).json(updatedUser)
+                        res.status(200).json({ Updated: `User with id: ${id}` })
                     })
             } else {
                 res.status(404).json({ errorMessage: 'Could not find User with that id' })

@@ -1,10 +1,10 @@
 # node-play
 
-Playing around with Node
+This is a project I have made during my free time while a school at lambda. The goal of this project is to practice my Node backend skills as well as React frontend skills. 
 
 ##Documentation
 
-Base URL for Deployed API: https://how-to-backend.herokuapp.com/
+Base URL for Deployed API: https://node-play.herokuapp.com/
 
 
 ## **Endpoints**
